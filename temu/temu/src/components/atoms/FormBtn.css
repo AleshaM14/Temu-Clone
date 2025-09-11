@@ -1,0 +1,25 @@
+.btn {
+  width: 100%;
+  padding: 10px 14px;
+  background-color: #ff6600; /* Temu orange */
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+  background-color: #e65c00;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(255, 102, 0, 0.6);
+}

@@ -1,0 +1,41 @@
+.Pcard {
+  /* border: 1px solid #ddd; */
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 10px;
+  padding: 0;
+  width: 200px;
+  font-family: Arial, sans-serif;
+  background: #fff;
+  transition: box-shadow 0.3s ease;
+}
+
+.Pcard:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.Pcard button {
+  display: block;
+  width: 80%;
+  margin: 8px auto 12px auto;
+  padding: 6px 0;
+  background: #ff5c00;
+  color: #fff;
+  border: none;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+.Pcard button:hover {
+  background: #e64a00;
+}
+
+.price-line {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,9 @@
+.AddToCartBtn {
+  background: orange;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}

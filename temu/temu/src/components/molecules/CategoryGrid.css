@@ -1,0 +1,7 @@
+.category-grid {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: flex-start;
+}

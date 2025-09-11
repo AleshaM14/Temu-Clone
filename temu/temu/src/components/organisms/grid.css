@@ -1,0 +1,15 @@
+
+
+.ProductGrid {
+  display: flex;          /* use flex layout */
+  flex-wrap: wrap;        /* wrap to next line if needed */
+  gap: 20px;              /* space between cards */
+  justify-content: center;/* center all cards */
+  padding: 20px;          /* space around grid */
+}
+
+/* 
+.Pcard {
+  margin: 10px;
+  border: 1px solid gray;
+} */

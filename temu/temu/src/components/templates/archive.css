@@ -1,0 +1,21 @@
+.ArchiveSection {
+  padding: 20px;
+  text-align: center;
+  background-color: #fff;
+}
+
+.ArchiveSection h2 {
+  font-size: 24px;
+  color: #ff5c00; /* Temu orange */
+  font-weight: 700;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
+
+.ArchiveSection h3 {
+  font-size: 16px;
+  color: #555;
+  font-weight: 500;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}

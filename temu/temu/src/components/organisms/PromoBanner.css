@@ -1,0 +1,46 @@
+.promo-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: #d40000; */
+  padding: 40px;
+  color: rgb(42, 37, 37);
+  overflow: hidden;
+  flex-wrap: wrap;
+  position: relative;
+  background-image: url('https://aimg.kwcdn.com/material-put/2079f60000/84532b59-eb1e-4139-a155-debb1fd8c6ce.png?imageView2/q/70/format/webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.promo-item {
+  margin: 0 10px;
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  transform: rotate(-5deg); /* gives a tilted effect like Temu */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.small-heading {
+  font-size: 18px;
+  color: yellow;
+  margin-bottom: 10px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.main-heading {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.cta-button {
+  background: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}

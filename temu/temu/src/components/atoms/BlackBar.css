@@ -1,0 +1,12 @@
+.black-bar {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.black-bar img {
+  height: 30px;
+  margin: 0 10px;
+  vertical-align: middle;
+}

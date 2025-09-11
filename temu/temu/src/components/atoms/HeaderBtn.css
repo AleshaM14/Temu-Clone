@@ -1,0 +1,16 @@
+.header-btn {
+  padding: 8px 20px;
+  margin-left: 10px;
+  background-color: #ff6600; /* Temu orange */
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.header-btn:hover {
+  background-color: #e65c00;
+}

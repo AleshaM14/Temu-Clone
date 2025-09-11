@@ -1,0 +1,26 @@
+.category-circle-item {
+  text-align: center;
+  width: 80px;
+  padding: 5px;
+}
+
+.circle-image {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  border: 1px solid #eee;
+}
+
+.circle-label {
+  font-size: 12px;
+  margin-top: 5px;
+  color: #333; /* Darker text for visibility */
+  font-weight: 500;
+}
+
+.circle-image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
