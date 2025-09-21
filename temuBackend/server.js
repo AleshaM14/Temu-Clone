@@ -3,7 +3,7 @@ import cors from "cors"; //Stands for Cross-Origin Resource Sharing.Without this
 import dotenv from "dotenv"; //Loads environment variables from a .env file (like database URLs or secret keys)
 import authRoutes from "./routes/authRoutes.js"; //Handles user-related routes like (login, register, logout, profile).
 import connectDB from "./config/db.js"; //connects to MongoDB database.
-import session from "express-session"; //manages user sessions (keeps users logged in across requests).
+// import session from "express-session"; //manages user sessions (keeps users logged in across requests).
 import prodRoutes from "./routes/productRoute.js"; //all routes about products (fetch products, add product, update product).
 
 dotenv.config(); // Load environment variables from .env file
@@ -22,14 +22,14 @@ app.use(
 
 app.use(express.json()); //Lets your server read JSON data sent from the frontend.
 
-app.use(
-  session({
-    secret: "first_session",
-    resave: false,
-    saveUninitialized: false,
-    cookie: { secure: false, httpOnly: true },
-  })
-);
+// app.use(
+//   session({
+//     secret: "first_session",
+//     resave: false,
+//     saveUninitialized: false,
+//     cookie: { secure: false, httpOnly: true },
+//   })
+// );
 app.use(express.json());
 app.use(express.urlencoded({ extended: true })); //Lets your server read form data
 

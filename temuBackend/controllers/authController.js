@@ -44,14 +44,17 @@ const registerUser = async (req, res) => {
       contact,
       DOB,
       address,
+      role: "user", // Default role is 'user'
     });
 
-    req.session.user = { id: newUser._id, name: newUser.fullname };
+    // req.session.user = { id: newUser._id, name: newUser.fullname };
     //note : The server remembers the user using a session. The browser gets a cookie to identify the user.This way, the user stays logged in while using the app.
 
+    const token = generateToken(newUser);
     res.status(201).json({
       message: "User registered successfully",
-      user: req.session.user,
+      token,
+      user: { id: newUser._id, name: newUser.fullname, email: newUser.email },
     });
   } catch (err) {
     res.status(500).json({ message: err.message });
@@ -114,15 +117,19 @@ const loginUser = async (req, res) => {
    { message: "Logout successful" }
  */
 
+// const logout = (req, res) => {
+//   try {
+//     req.session.destroy(() => {
+//       //Deletes the current user’s session on the server.
+//       res.json({ message: "Logout successful" });
+//     });
+//   } catch (err) {
+//     res.status(500).json({ message: err.message });
+//   }
+// };
+
 const logout = (req, res) => {
-  try {
-    req.session.destroy(() => {
-      //Deletes the current user’s session on the server.
-      res.json({ message: "Logout successful" });
-    });
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
+  res.json({ message: "Logout successful. Please clear token on client." });
 };
 
 /*Get Profile (/auth/getprofile):
@@ -141,8 +148,15 @@ const logout = (req, res) => {
    { user: { id, name } } OR { message: "Unauthorized" }
  */
 
-const getProfile = (req, res) => {
-  res.json({ user: req.user }); // req.user comes from middleware
+const getProfile = async (req, res) => {
+  try {
+    if (!req.user) {
+      return res.status(401).json({ message: "Unauthorized" });
+    }
+    res.json({ user: req.user });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
 };
 
 /*summary of get profile: It checks if the user is logged in by looking at the session; if yes, it returns their info, and if not, it returns “Unauthorized.” */

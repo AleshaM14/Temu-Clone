@@ -35,6 +35,7 @@ const userSchema = new mongoose.Schema(
         isDefault: { type: Boolean, default: false }, // Marks the default address.
       },
     ],
+    role: { type: String, enum: ["user", "admin"], default: "user" }, //Role-based access control.
   },
   { timestamps: true }
 );
